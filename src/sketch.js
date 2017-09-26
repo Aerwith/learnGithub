@@ -9,12 +9,11 @@ function setup() {
   for(i=0;i<NUMSCREENS;i++){
     canvasi = createCanvas(window.innerWidth*SCALEX, window.innerHeight/NUMSCREENS-UPBUFFER-DOWNBUFFER);
     var p1 = createP('This is a paragraph, the CSS class is apple.');
-    
+
     canvasArr.push(canvasi);
 
 }
   //noCanvas();
-
   createElement('h1','Welcome to this page.');
 
   var p1 = createP('This is a paragraph, the CSS class is apple.');
@@ -30,8 +29,10 @@ function setup() {
   p4.class('apple');
   p4.id('orange');
 
+
 }
 
 function draw() {
   background(51);
+  p4.html('mouseX')
 }
