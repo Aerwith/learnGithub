@@ -1,5 +1,19 @@
+var LEFTBUFFER = 0;
+var RIGHTBUFFER =0;
+var DOWNBUFFER = 0;
+var UPBUFFER = 0;
+var SCALEX = 0.95;
+var NUMSCREENS = 4;
+var canvasArr = [];
 function setup() {
-  noCanvas();
+  for(i=0;i<NUMSCREENS;i++){
+    canvasi = createCanvas(window.innerWidth*SCALEX, window.innerHeight/NUMSCREENS-UPBUFFER-DOWNBUFFER);
+    var p1 = createP('This is a paragraph, the CSS class is apple.');
+    
+    canvasArr.push(canvasi);
+
+}
+  //noCanvas();
 
   createElement('h1','Welcome to this page.');
 
@@ -16,4 +30,8 @@ function setup() {
   p4.class('apple');
   p4.id('orange');
 
+}
+
+function draw() {
+  background(51);
 }
