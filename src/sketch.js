@@ -5,6 +5,7 @@ var UPBUFFER = 0;
 var SCALEX = 0.95;
 var NUMSCREENS = 4;
 var canvasArr = [];
+var p4;
 function setup() {
   for(i=0;i<NUMSCREENS;i++){
     canvasi = createCanvas(window.innerWidth*SCALEX, window.innerHeight/NUMSCREENS-UPBUFFER-DOWNBUFFER);
@@ -12,7 +13,7 @@ function setup() {
 
     canvasArr.push(canvasi);
 
-}
+  }
   //noCanvas();
   createElement('h1','Welcome to this page.');
 
@@ -25,7 +26,7 @@ function setup() {
   var p3 = createP('This is another paragraph, the CSS class is also apple.');
   p3.class('apple');
 
-  var p4 = createP('This is another paragraph, the CSS class is also apple, but now there is also an id set to orange.');
+  p4 = createP('This is another paragraph, the CSS class is also apple, but now there is also an id set to orange.');
   p4.class('apple');
   p4.id('orange');
 
@@ -34,5 +35,5 @@ function setup() {
 
 function draw() {
   background(51);
-  p4.html('mouseX')
+  p4.html(round(mouseX));
 }
